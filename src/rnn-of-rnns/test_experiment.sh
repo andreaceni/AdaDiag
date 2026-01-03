@@ -33,13 +33,6 @@
 #
 #
 #
-#
-#python final_train_and_test.py --dataset adiac --gpus 3 --blocksize32 --block_config 3 --gating --coupling_topology 20 --lr 0.01 --trials 10 --model_type adadiag
-#python final_train_and_test.py --dataset adiac --gpus 3 --blocksize32 --block_config 1 --coupling_topology 20 --eul_step 0.1 --lr 0.01 --trials 10 --model_type scn
-#
-#python final_train_and_test.py --dataset pems --gpus 3 --blocksize32 --block_config 3 --gating --coupling_topology 500 --lr 0.01 --trials 10 --model_type adadiag
-#python final_train_and_test.py --dataset pems --gpus 3 --blocksize32 --block_config 2 --coupling_topology 20 --eul_step 0.01 --lr 0.01 --trials 10 --model_type scn
-#
 
 
 # Running in parallel as different scripts
@@ -84,42 +77,3 @@ python final_train_and_test.py --trials 3 --model_type rnn --dataset psmnist --g
 #python final_train_and_test.py --dataset pems --gpus 2 --blocksize32 --block_config 3 --gating --coupling_topology 500 --lr 0.01 --trials 3 --model_type adadiag --train_batch_size 16 --test_batch_size 128
 #python final_train_and_test.py --dataset pems --gpus 2 --blocksize32 --block_config 2 --coupling_topology 20 --eul_step 0.01 --lr 0.01 --trials 3 --model_type scn --train_batch_size 16 --test_batch_size 128
 #
-
-
-
-
-# adiac
-
-# fordb 
-
-
-# newstitlesentiment
-
-
-
-
-
-# pems
-
-
-# har2
-
-# ieeeppg
-
-
-
-# facedetection
-#python final_train_and_test.py --dataset facedetection --gpus 2 --blocksize32 --block_config 3 --gating --coupling_topology 5 --lr 0.001 --trials 3 --model_type adadiag
-#python final_train_and_test.py --dataset facedetection --gpus 2 --blocksize32 --block_config 2 --coupling_topology 5 --eul_step 0.1 --lr 0.001 --trials 3 --model_type scn
-
-
-# empopain
-#python final_train_and_test.py --dataset emopain --gpus 2 --blocksize32 --block_config 3 --gating --coupling_topology 20 --lr 0.01 --trials 3 --model_type adadiag
-#python final_train_and_test.py --dataset emopain --gpus 2 --blocksize32 --block_config 2 --coupling_topology 20 --eul_step 0.1 --lr 0.001 --trials 3 --model_type scn
-
-
-# motionsensehar
-#python final_train_and_test.py --dataset motionsensehar --gpus 2 --blocksize8 --block_config 3 --gating --coupling_topology 5 --lr 0.01 --trials 3 --model_type adadiag 
-#python final_train_and_test.py --dataset motionsensehar --gpus 2 --blocksize32 --block_config 2 --eul_step 0.1 --coupling_topology 5 --lr 0.001 --trials 3 --model_type scn 
-
-
