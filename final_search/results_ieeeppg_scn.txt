@@ -1,0 +1,184 @@
+==== Model Run Details ====
+Dataset: ieeeppg
+Model type: scn
+Block sizes: [32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32]
+Block config: 2
+Activation: relu
+Coupling topology: 5
+Block init fn: sparse
+Coupling block init fn: uniform
+Train batch size: 128
+Test batch size: 128
+Epochs: 50
+Decay epochs: [80, 160]
+Decay scalar: 0.1
+Gating: False
+Gate bounds: [1e-05, 0.2]
+Euler step: 0.1
+Learning rate: 0.01
+Trials: 3
+==========================
+
+
+--- Trial 1/3 ---
+Epoch 1: TrainLoss=11420.5419, TestLoss=5917.2052, Test RMSE=78.8757
+Epoch 2: TrainLoss=5833.1644, TestLoss=4549.3378, Test RMSE=69.9290
+Epoch 3: TrainLoss=4920.7514, TestLoss=3888.1036, Test RMSE=65.5375
+Epoch 4: TrainLoss=4410.3825, TestLoss=3813.1651, Test RMSE=64.6034
+Epoch 5: TrainLoss=4076.6546, TestLoss=3732.2137, Test RMSE=65.1159
+Epoch 6: TrainLoss=3971.3671, TestLoss=3838.6864, Test RMSE=65.5720
+Epoch 7: TrainLoss=3779.2811, TestLoss=3942.7662, Test RMSE=66.5471
+Epoch 8: TrainLoss=3928.0924, TestLoss=4373.0396, Test RMSE=68.9841
+Epoch 9: TrainLoss=3293.8542, TestLoss=3619.7307, Test RMSE=64.2745
+Epoch 10: TrainLoss=2945.3225, TestLoss=3403.4714, Test RMSE=62.5057
+Epoch 11: TrainLoss=2711.6456, TestLoss=3794.7692, Test RMSE=66.4616
+Epoch 12: TrainLoss=2619.7983, TestLoss=3686.6047, Test RMSE=63.7886
+Epoch 13: TrainLoss=2485.6900, TestLoss=3350.2686, Test RMSE=62.9934
+Epoch 14: TrainLoss=2219.3466, TestLoss=3670.7951, Test RMSE=63.6360
+Epoch 15: TrainLoss=2159.4371, TestLoss=2531.3317, Test RMSE=53.8576
+Epoch 16: TrainLoss=1806.7196, TestLoss=2194.1966, Test RMSE=49.9022
+Epoch 17: TrainLoss=1485.1661, TestLoss=1561.8414, Test RMSE=42.8625
+Epoch 18: TrainLoss=1317.4037, TestLoss=1328.1857, Test RMSE=39.2010
+Epoch 19: TrainLoss=1201.6203, TestLoss=1160.8914, Test RMSE=36.4338
+Epoch 20: TrainLoss=1206.4318, TestLoss=1142.5615, Test RMSE=36.0370
+Epoch 21: TrainLoss=1196.8487, TestLoss=1208.6588, Test RMSE=37.2830
+Epoch 22: TrainLoss=1054.3467, TestLoss=865.4105, Test RMSE=31.4282
+Epoch 23: TrainLoss=1055.5058, TestLoss=779.8645, Test RMSE=29.8555
+Epoch 24: TrainLoss=1054.4121, TestLoss=926.8519, Test RMSE=32.3616
+Epoch 25: TrainLoss=981.8973, TestLoss=748.5815, Test RMSE=29.5244
+Epoch 26: TrainLoss=937.0739, TestLoss=820.9994, Test RMSE=30.1315
+Epoch 27: TrainLoss=944.9293, TestLoss=711.7340, Test RMSE=28.8241
+Epoch 28: TrainLoss=928.7271, TestLoss=777.5491, Test RMSE=29.5766
+Epoch 29: TrainLoss=925.5345, TestLoss=788.0734, Test RMSE=29.6496
+Epoch 30: TrainLoss=875.3516, TestLoss=734.7837, Test RMSE=28.9558
+Epoch 31: TrainLoss=895.3035, TestLoss=720.3455, Test RMSE=28.8173
+Epoch 32: TrainLoss=889.9813, TestLoss=856.4876, Test RMSE=31.4469
+Epoch 33: TrainLoss=812.8555, TestLoss=755.4102, Test RMSE=29.5280
+Epoch 34: TrainLoss=796.4125, TestLoss=862.9346, Test RMSE=31.3504
+Epoch 35: TrainLoss=808.6420, TestLoss=764.1245, Test RMSE=29.6369
+Epoch 36: TrainLoss=761.2806, TestLoss=749.2177, Test RMSE=29.3159
+Epoch 37: TrainLoss=786.9064, TestLoss=691.1417, Test RMSE=28.4772
+Epoch 38: TrainLoss=763.4878, TestLoss=739.6554, Test RMSE=29.6154
+Epoch 39: TrainLoss=761.7078, TestLoss=875.2383, Test RMSE=31.7249
+Epoch 40: TrainLoss=798.4085, TestLoss=867.8091, Test RMSE=31.4492
+Epoch 41: TrainLoss=831.5222, TestLoss=1117.0252, Test RMSE=34.6512
+Epoch 42: TrainLoss=871.1792, TestLoss=809.9268, Test RMSE=31.0930
+Epoch 43: TrainLoss=811.4680, TestLoss=856.7429, Test RMSE=31.5340
+Epoch 44: TrainLoss=738.7441, TestLoss=719.3351, Test RMSE=28.9428
+Epoch 45: TrainLoss=711.4641, TestLoss=743.5985, Test RMSE=29.5916
+Epoch 46: TrainLoss=727.9046, TestLoss=896.2160, Test RMSE=31.8566
+Epoch 47: TrainLoss=720.3248, TestLoss=794.2778, Test RMSE=30.6048
+Epoch 48: TrainLoss=712.1933, TestLoss=720.7041, Test RMSE=29.1369
+Epoch 49: TrainLoss=765.6861, TestLoss=800.8621, Test RMSE=30.8076
+Epoch 50: TrainLoss=2669366084921.3560, TestLoss=130370.3438, Test RMSE=382.7263
+Trial 1/3: FinalEpochScore=382.7263, BestEpochScore=28.4772
+
+--- Trial 2/3 ---
+Epoch 1: TrainLoss=11374.0154, TestLoss=7426.9102, Test RMSE=87.9780
+Epoch 2: TrainLoss=6342.4568, TestLoss=3749.9875, Test RMSE=64.0808
+Epoch 3: TrainLoss=4863.7849, TestLoss=3675.1595, Test RMSE=63.8430
+Epoch 4: TrainLoss=4329.8597, TestLoss=4187.8542, Test RMSE=67.7373
+Epoch 5: TrainLoss=4197.8690, TestLoss=4565.5220, Test RMSE=70.1647
+Epoch 6: TrainLoss=4219.0784, TestLoss=3861.7440, Test RMSE=66.0066
+Epoch 7: TrainLoss=4043.5139, TestLoss=4623.5554, Test RMSE=71.4732
+Epoch 8: TrainLoss=3837.6567, TestLoss=3898.4006, Test RMSE=66.8077
+Epoch 9: TrainLoss=3639.8587, TestLoss=3889.6377, Test RMSE=67.0055
+Epoch 10: TrainLoss=3537.2167, TestLoss=3652.5901, Test RMSE=64.8575
+Epoch 11: TrainLoss=3253.1735, TestLoss=4467.8895, Test RMSE=69.7207
+Epoch 12: TrainLoss=3087.4880, TestLoss=3759.7372, Test RMSE=66.3066
+Epoch 13: TrainLoss=2738.9478, TestLoss=3527.9517, Test RMSE=64.0734
+Epoch 14: TrainLoss=2504.5409, TestLoss=3435.0727, Test RMSE=63.0202
+Epoch 15: TrainLoss=2277.8855, TestLoss=3296.1150, Test RMSE=61.7945
+Epoch 16: TrainLoss=2177.1782, TestLoss=2547.0033, Test RMSE=53.9683
+Epoch 17: TrainLoss=1973.5617, TestLoss=2298.7915, Test RMSE=51.6614
+Epoch 18: TrainLoss=1658.1491, TestLoss=1708.7969, Test RMSE=44.6783
+Epoch 19: TrainLoss=1402.0959, TestLoss=1384.0367, Test RMSE=40.0647
+Epoch 20: TrainLoss=1261.3898, TestLoss=1189.5681, Test RMSE=37.0450
+Epoch 21: TrainLoss=1123.6728, TestLoss=747.6941, Test RMSE=29.2932
+Epoch 22: TrainLoss=985.6118, TestLoss=983.7101, Test RMSE=33.7217
+Epoch 23: TrainLoss=1076.8964, TestLoss=923.0528, Test RMSE=31.1234
+Epoch 24: TrainLoss=1107.6408, TestLoss=744.9218, Test RMSE=28.8380
+Epoch 25: TrainLoss=944.4915, TestLoss=736.6368, Test RMSE=28.6549
+Epoch 26: TrainLoss=879.6877, TestLoss=808.7345, Test RMSE=30.3837
+Epoch 27: TrainLoss=823.0005, TestLoss=893.7454, Test RMSE=31.5122
+Epoch 28: TrainLoss=809.6750, TestLoss=983.3048, Test RMSE=33.0821
+Epoch 29: TrainLoss=826.4632, TestLoss=1008.9334, Test RMSE=33.0217
+Epoch 30: TrainLoss=771.2356, TestLoss=804.2753, Test RMSE=30.3784
+Epoch 31: TrainLoss=736.9211, TestLoss=926.3235, Test RMSE=32.4537
+Epoch 32: TrainLoss=766.4180, TestLoss=878.3191, Test RMSE=31.7812
+Epoch 33: TrainLoss=751.7661, TestLoss=852.5000, Test RMSE=31.4572
+Epoch 34: TrainLoss=732.9979, TestLoss=955.3072, Test RMSE=32.9987
+Epoch 35: TrainLoss=706.7217, TestLoss=961.5713, Test RMSE=33.1407
+Epoch 36: TrainLoss=698.6325, TestLoss=853.3010, Test RMSE=31.3123
+Epoch 37: TrainLoss=700.4293, TestLoss=911.9332, Test RMSE=32.1374
+Epoch 38: TrainLoss=695.6351, TestLoss=978.2917, Test RMSE=33.5800
+Epoch 39: TrainLoss=691.1920, TestLoss=949.2417, Test RMSE=33.1311
+Epoch 40: TrainLoss=672.2640, TestLoss=854.5876, Test RMSE=31.2352
+Epoch 41: TrainLoss=683.9138, TestLoss=1019.1125, Test RMSE=33.9200
+Epoch 42: TrainLoss=692.1325, TestLoss=1142.8733, Test RMSE=36.1518
+Epoch 43: TrainLoss=692.3627, TestLoss=1039.8501, Test RMSE=33.7553
+Epoch 44: TrainLoss=742.9089, TestLoss=973.0131, Test RMSE=33.3885
+Epoch 45: TrainLoss=705.4474, TestLoss=1065.0638, Test RMSE=34.4750
+Epoch 46: TrainLoss=664.8564, TestLoss=945.1179, Test RMSE=32.7988
+Epoch 47: TrainLoss=673.8401, TestLoss=847.6904, Test RMSE=31.1866
+Epoch 48: TrainLoss=649.0935, TestLoss=1093.8460, Test RMSE=34.9158
+Epoch 49: TrainLoss=668.1843, TestLoss=869.7511, Test RMSE=31.7525
+Epoch 50: TrainLoss=660.6122, TestLoss=1111.1355, Test RMSE=35.3261
+Trial 2/3: FinalEpochScore=35.3261, BestEpochScore=28.6549
+
+--- Trial 3/3 ---
+Epoch 1: TrainLoss=11087.8105, TestLoss=5388.0614, Test RMSE=76.1702
+Epoch 2: TrainLoss=5797.0124, TestLoss=5068.8383, Test RMSE=73.4343
+Epoch 3: TrainLoss=4917.6849, TestLoss=3929.1695, Test RMSE=67.0366
+Epoch 4: TrainLoss=4723.5165, TestLoss=4716.1564, Test RMSE=71.6328
+Epoch 5: TrainLoss=4424.4889, TestLoss=4109.5043, Test RMSE=67.4988
+Epoch 6: TrainLoss=4138.0674, TestLoss=4449.7424, Test RMSE=69.5502
+Epoch 7: TrainLoss=3889.1350, TestLoss=4197.1263, Test RMSE=68.8592
+Epoch 8: TrainLoss=1102116358.5448, TestLoss=11108.4535, Test RMSE=111.8852
+Epoch 9: TrainLoss=328013344.1435, TestLoss=37561.7852, Test RMSE=193.3975
+Epoch 10: TrainLoss=58116.0576, TestLoss=24772.2422, Test RMSE=158.6467
+Epoch 11: TrainLoss=30803.7514, TestLoss=14774.8363, Test RMSE=125.7525
+Epoch 12: TrainLoss=19153.5526, TestLoss=11842.6162, Test RMSE=114.5250
+Epoch 13: TrainLoss=15191.5975, TestLoss=10913.3421, Test RMSE=110.7794
+Epoch 14: TrainLoss=13399.6753, TestLoss=10317.6895, Test RMSE=108.3243
+Epoch 15: TrainLoss=12339.7765, TestLoss=9943.2823, Test RMSE=106.6447
+Epoch 16: TrainLoss=11556.5164, TestLoss=9596.4625, Test RMSE=104.9645
+Epoch 17: TrainLoss=10784.7373, TestLoss=9006.7921, Test RMSE=102.0661
+Epoch 18: TrainLoss=9952.8084, TestLoss=8475.6233, Test RMSE=99.2206
+Epoch 19: TrainLoss=9104.8942, TestLoss=7851.3607, Test RMSE=95.7220
+Epoch 20: TrainLoss=8241.0022, TestLoss=7223.4194, Test RMSE=91.9446
+Epoch 21: TrainLoss=7479.3352, TestLoss=6699.3443, Test RMSE=88.4763
+Epoch 22: TrainLoss=6815.8790, TestLoss=6383.5969, Test RMSE=86.0075
+Epoch 23: TrainLoss=6374.5334, TestLoss=6208.4964, Test RMSE=84.3544
+Epoch 24: TrainLoss=6093.6973, TestLoss=6135.9240, Test RMSE=83.4013
+Epoch 25: TrainLoss=5960.6286, TestLoss=6130.7358, Test RMSE=83.0172
+Epoch 26: TrainLoss=5830.3010, TestLoss=6185.8599, Test RMSE=83.0665
+Epoch 27: TrainLoss=5786.0298, TestLoss=6128.3760, Test RMSE=82.6307
+Epoch 28: TrainLoss=5714.9615, TestLoss=6082.8075, Test RMSE=82.3416
+Epoch 29: TrainLoss=5648.3742, TestLoss=6104.0054, Test RMSE=82.4184
+Epoch 30: TrainLoss=5576.5573, TestLoss=6005.2633, Test RMSE=81.7869
+Epoch 31: TrainLoss=5533.9416, TestLoss=5970.4535, Test RMSE=81.5355
+Epoch 32: TrainLoss=5482.6990, TestLoss=5976.3355, Test RMSE=81.6610
+Epoch 33: TrainLoss=5409.1086, TestLoss=5906.6785, Test RMSE=81.2210
+Epoch 34: TrainLoss=5339.4543, TestLoss=5824.4247, Test RMSE=80.8001
+Epoch 35: TrainLoss=5341.4328, TestLoss=5799.4602, Test RMSE=80.6238
+Epoch 36: TrainLoss=5210.3161, TestLoss=5715.2065, Test RMSE=80.0573
+Epoch 37: TrainLoss=5170.3257, TestLoss=5651.0885, Test RMSE=79.6033
+Epoch 38: TrainLoss=5096.1576, TestLoss=5689.6870, Test RMSE=79.8428
+Epoch 39: TrainLoss=5036.1689, TestLoss=5571.1663, Test RMSE=79.1371
+Epoch 40: TrainLoss=5018.2004, TestLoss=5799.2686, Test RMSE=80.3793
+Epoch 41: TrainLoss=4961.4104, TestLoss=5565.7990, Test RMSE=79.0701
+Epoch 42: TrainLoss=4916.5587, TestLoss=5614.0754, Test RMSE=79.2481
+Epoch 43: TrainLoss=4926.9078, TestLoss=5713.2234, Test RMSE=79.7944
+Epoch 44: TrainLoss=4807.3283, TestLoss=5482.9339, Test RMSE=78.4434
+Epoch 45: TrainLoss=4817.7552, TestLoss=5479.1311, Test RMSE=78.3552
+Epoch 46: TrainLoss=4741.7709, TestLoss=5257.7708, Test RMSE=77.0760
+Epoch 47: TrainLoss=4724.9340, TestLoss=5216.7917, Test RMSE=76.7010
+Epoch 48: TrainLoss=4627.4430, TestLoss=5416.4806, Test RMSE=77.9111
+Epoch 49: TrainLoss=4657.6696, TestLoss=5294.6125, Test RMSE=77.1162
+Epoch 50: TrainLoss=4629.1041, TestLoss=5156.3174, Test RMSE=76.3523
+Trial 3/3: FinalEpochScore=76.3523, BestEpochScore=67.0366
+
+==== FINAL SUMMARY ====
+Test RMSE over 3 trials (final epoch): Mean=164.8016, Std=155.0036
+Test RMSE over 3 trials (best epoch): Mean=41.3895, Std=18.1353
