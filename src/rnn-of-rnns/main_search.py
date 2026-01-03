@@ -223,23 +223,12 @@ def main():
 
     # Final search commands:
     # Completed:
-    #python main_search.py --datasets japanesevowels adiac har2 --gpus 2 --num_gpus 0.1 --num_cpus 8 --model_type scr lstm rnn rnnassembly
-    #python main_search.py --datasets newstitlesentiment --train_batch_size 1024 --eval_batch_size 1024 --max_epochs 10 --decay_epochs [5,8] --gpus 2 --num_gpus 0.5 --num_cpus 8 --model_type lstm scr rnn rnnassembly    
-    #python main_search.py --datasets ieeeppg --max_epochs 50 --decay_epochs 20 40 --gpus 3 --num_gpus 0.5 --num_cpus 8 --model_type scr
-    #stopped(python main_search.py --datasets ieeeppg --max_epochs 250 --decay_epochs 80 160 --gpus 3 --num_gpus 0.5 --num_cpus 8 --model_type lstm
-    #python main_search.py --datasets ieeeppg --max_epochs 50 --decay_epochs 20 40 --gpus 3 --num_gpus 0.5 --num_cpus 8 --model_type rnnassembly    
-    #python main_search.py --datasets ieeeppg --max_epochs 250 --decay_epochs 80 160 --gpus 3 --num_gpus 0.5 --num_cpus 8 --model_type rnn    
-    #stopped(python main_search.py --datasets emopain facedetection heartbeat motionsensehar --gpus 3 --num_gpus 0.25 --num_cpus 8 --model_type scr rnnassembly lstm rnn)   
-    #python main_search.py --datasets heartbeat motionsensehar emopain facedetection--gpus 3 --num_gpus 0.25 --num_cpus 8 --model_type scr rnnassembly
-    #python main_search.py --datasets forda blink fordb --gpus 2 --num_gpus 0.25 --num_cpus 8 --model_type lstm scr rnnassembly rnn    
-    #python main_search.py --datasets motionsensehar --gpus 3 --num_gpus 1. --num_cpus 8 --model_type rnnassembly scr
-    #python main_search.py --datasets pems --gpus 2 --num_gpus 1.0 --num_cpus 8 --model_type rnnassembly scr
-    #python main_search.py --datasets smnist psmnist --train_batch_size 512 --eval_batch_size 512 --gpus 0,1,2,3 --num_gpus 0.5 --num_cpus 8 --model_type rnnassembly scr
-
-    ###################################################################################################################################
-    # Extended search with cosine annealing LR scheduler:
-    # python main_search.py --datasets forda fordb --gpus 0 --num_gpus 1 --num_cpus 1 --model_type rnnassembly
-    ###################################################################################################################################
+    #python main_search.py --datasets japanesevowels adiac har2 --gpus 2 --num_gpus 0.1 --num_cpus 1 --model_type scr lstm rnn rnnassembly
+    #python main_search.py --datasets ieeeppg --max_epochs 50 --decay_epochs 20 40 --gpus 3 --num_gpus 0.5 --num_cpus 1 --model_type scr
+    #python main_search.py --datasets ieeeppg --max_epochs 50 --decay_epochs 20 40 --gpus 3 --num_gpus 0.5 --num_cpus 1 --model_type rnnassembly    
+    #python main_search.py --datasets forda fordb --gpus 2 --num_gpus 0.25 --num_cpus 1 --model_type lstm scr rnnassembly rnn    
+    #python main_search.py --datasets pems --gpus 2 --num_gpus 1.0 --num_cpus 1 --model_type rnnassembly scr
+    #python main_search.py --datasets smnist psmnist --train_batch_size 512 --eval_batch_size 512 --gpus 0,1,2,3 --num_gpus 0.5 --num_cpus 1 --model_type rnnassembly scr
 
     # ##### Workaround for Ray since /tmp is over 95% full #####
     #custom_ray_dir = "/storagenfs/a052721/ray_tmp" # Change this to a directory with sufficient space
