@@ -110,8 +110,6 @@ class SkewAntisymmetricCoupling(nn.Module):
 
 
 
- # HEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-
 
     @property
     def couplings(self) -> torch.Tensor:
