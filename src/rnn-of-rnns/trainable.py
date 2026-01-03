@@ -5,14 +5,13 @@ import torch
 from torch import nn
 from torch.optim import Adam
 from torch.optim.lr_scheduler import MultiStepLR
-from torch.optim.lr_scheduler import CosineAnnealingWarmRestarts
 from torchdyno.models.initializers import uniform
 import math
 
 from common_utils import (load_mnist, load_har2_dataloaders, get_har2_input_output_sizes, load_forda_dataloaders, 
                           get_forda_input_output_sizes, 
                           load_fordb_dataloaders, get_fordb_input_output_sizes, load_adiac_dataloaders, get_adiac_input_output_sizes)
-from common_utils import load_IEEEPPG_dataloaders, get_IEEEPPG_input_output_sizes, load_NewsHeadlineSentiment_dataloaders, get_NewsHeadlineSentiment_input_output_sizes, load_AppliancesEnergy_dataloaders, get_AppliancesEnergy_input_output_sizes, load_NewsTitleSentiment_dataloaders, get_NewsTitleSentiment_input_output_sizes
+from common_utils import load_IEEEPPG_dataloaders, get_IEEEPPG_input_output_sizes, load_NewsTitleSentiment_dataloaders, get_NewsTitleSentiment_input_output_sizes
 from common_utils import load_JapaneseVowels_dataloaders, get_JapaneseVowels_input_output_sizes
 from common_utils import (
     load_PEMS_SF_dataloaders, get_PEMS_SF_input_output_sizes,
@@ -20,11 +19,8 @@ from common_utils import (
 
 regression_datasets = [ "ieeeppg","newstitlesentiment"]
 
-from torchdyno.data.datasets.mg17 import get_mackey_glass
-from torchdyno.data.datasets.motionHAR import get_motion_data
 
 from torchdyno.models.rnn_assembly import RNNAssembly
-from rnn_assembly_modular import RNNAssemblyModular
 
 
 class RNNAssemblyTrainable(tune.Trainable):
@@ -354,26 +350,18 @@ class RNNAssemblyTrainable(tune.Trainable):
             "coupling_block_init_fn": get_init_fn(*config["coupling_block_init_fn"]),
             "coupling_topology": config["coupling_topology"],
             "eul_step": config["eul_step"],
-            #"gamma": config["gamma"], # <--------------------------- TO DELETE?
             "activation": config["activation"],
             "constrained_blocks": block_config[1],
             "dtype": dtype,
             "gated_eul": config["gating"],  # Use gated Euler step if True, otherwise use fixed Euler step
             "min_gate": config["gate_bounds"][0], # minimum gate step
             "max_gate": config["gate_bounds"][1],  # maximum gate step
-            "coupling_rescaling": config["coupling_rescaling"],  # "local", "global", or "unconstrained" # <--------------------------- TO DELETE?
-            "spectral_threshold": spectral_threshold,  # Pass spectral constraint # <--------------------------- TO DELETE?
-            "structure": config.get("block_structure", "identity"),  # Pass block structure to RNNAssembly # <--------------------------- TO DELETE?
+            "coupling_rescaling": config["coupling_rescaling"],  # "local", "global", or "unconstrained" 
+            "spectral_threshold": spectral_threshold,  # Pass spectral constraint 
+            "structure": config.get("block_structure", "identity"),  # Pass block structure to RNNAssembly 
         }
         
-        if model_mode == "modular":
-            # Use the new modular model with one channel per module
-            print(f"Using RNNAssemblyModular (one channel per module)")
-            self.model = RNNAssemblyModular.from_initializers(**model_params)
-        else:
-            # Use standard model (all modules see all channels)
-            print(f"Using standard RNNAssembly (all modules see all channels)")
-            self.model = RNNAssembly.from_initializers(**model_params)
+        self.model = RNNAssembly.from_initializers(**model_params)
         self.model.to(device=self.device)
 
         # Use MSELoss for regression (floodmodeling), CrossEntropyLoss for classification tasks (MNIST, HAR-2)
@@ -383,24 +371,12 @@ class RNNAssemblyTrainable(tune.Trainable):
             self.loss = nn.CrossEntropyLoss()
         self.opt = Adam(self.model.parameters(), lr=config["lr"]) 
 
-        extended_search = True
-        if extended_search:
-            # Cosine Annealing LR scheduler
-            # (this scheduler is used for the extended model selection of AdaDiag)
-            self.lr = CosineAnnealingWarmRestarts(
-                self.opt,
-                T_0=50,          # Number of epochs for the first cycle
-                T_mult=2,        # Cycle length multiplier for subsequent cycles
-                eta_min=1e-5
-            ) 
-        else:
-            # MultiStepLR scheduler with milestones and decay scalar from config 
-            # (this scheduled has been used for model selection involving LSTM, VanillaRNN, SCN,and AdaDiag)
-            self.lr = MultiStepLR(
-                self.opt,
-                milestones=config["decay_epochs"],
-                gamma=config["decay_scalar"],
-            )
+        # MultiStepLR scheduler with milestones and decay scalar from config 
+        self.lr = MultiStepLR(
+            self.opt,
+            milestones=config["decay_epochs"],
+            gamma=config["decay_scalar"],
+        )
 
 
 
