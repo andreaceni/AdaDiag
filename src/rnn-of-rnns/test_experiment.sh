@@ -10,20 +10,11 @@
 #python final_train_and_test.py --dataset forda --gpus 2 --blocksize8 --block_config 3 --coupling_topology 20 --lr 0.001 --gating --trials 3 --model_type adadiag
 #python final_train_and_test.py --dataset forda --gpus 2 --blocksize32 --eul_step 0.1 --block_config 2 --coupling_topology 500 --lr 0.001 --trials 3 --model_type scn
 #
-#python final_train_and_test.py --dataset japanesevowels --gpus 2 --blocksize32 --block_config 3 --eul_step 0.1 --coupling_topology 20 --lr 0.01 --gating --trials 3 --model_type adadiag
-#python final_train_and_test.py --dataset japanesevowels --gpus 2 --blocksize32 --block_config 1 --eul_step 0.1 --coupling_topology 20 --lr 0.01 --trials 3 --model_type scn
-#
 #python final_train_and_test.py --dataset har2 --gpus 2 --blocksize8 --block_config 3 --gating --coupling_topology 20 --lr 0.01 --trials 3 --model_type adadiag
 #python final_train_and_test.py --dataset har2 --gpus 2 --blocksize32 --block_config 2 --eul_step 0.1 --coupling_topology 20 --lr 0.001 --trials 3 --model_type scn 
 #
 #python final_train_and_test.py --dataset ieeeppg --gpus 2 --blocksize8 --block_config 3 --gating --coupling_topology 5 --lr 0.01 --trials 3 --model_type adadiag --epochs 50
 #python final_train_and_test.py --dataset ieeeppg --gpus 2 --blocksize32 --block_config 2 --eul_step 0.1 --coupling_topology 5 --lr 0.01 --trials 3 --model_type scn --epochs 50
-#
-#python final_train_and_test.py --dataset pems --gpus 2 --blocksize32 --block_config 3 --gating --coupling_topology 500 --lr 0.01 --trials 3 --model_type adadiag
-#python final_train_and_test.py --dataset pems --gpus 2 --blocksize32 --block_config 2 --coupling_topology 20 --eul_step 0.01 --lr 0.01 --trials 3 --model_type scn
-#
-#python final_train_and_test.py --dataset adiac --gpus 2 --blocksize32 --block_config 3 --gating --coupling_topology 20 --lr 0.01 --trials 3 --model_type adadiag
-#python final_train_and_test.py --dataset adiac --gpus 2 --blocksize32 --block_config 1 --coupling_topology 20 --eul_step 0.1 --lr 0.01 --trials 3 --model_type scn
 #
 #python final_train_and_test.py --dataset fordb --gpus 2 --blocksize32 --block_config 3 --gating --coupling_topology 5 --lr 0.01 --trials 3 --model_type adadiag
 #python final_train_and_test.py --dataset fordb --gpus 2 --blocksize32 --block_config 2 --coupling_topology 20 --eul_step 0.1 --lr 0.001 --trials 3 --model_type scn
@@ -32,6 +23,15 @@
 #python final_train_and_test.py --dataset newstitlesentiment --epochs 50 --decay_epochs 20 40 --train_batch_size 1024 --test_batch_size 1024 --gpus 2 --blocksize8 --block_config 2 --coupling_topology 5 --eul_step 0.01 --lr 0.001 --trials 3 --model_type scn
 #
 #
+# Smaller batch sizes::
+#python final_train_and_test.py --dataset japanesevowels --gpus 2 --blocksize32 --block_config 3 --eul_step 0.1 --coupling_topology 20 --lr 0.01 --gating --trials 3 --model_type adadiag --train_batch_size 16 --test_batch_size 128
+#python final_train_and_test.py --dataset japanesevowels --gpus 2 --blocksize32 --block_config 1 --eul_step 0.1 --coupling_topology 20 --lr 0.01 --trials 3 --model_type scn --train_batch_size 16 --test_batch_size 128
+#
+#python final_train_and_test.py --dataset adiac --gpus 2 --blocksize32 --block_config 3 --gating --coupling_topology 20 --lr 0.01 --trials 3 --model_type adadiag --train_batch_size 16 --test_batch_size 128
+#python final_train_and_test.py --dataset adiac --gpus 2 --blocksize32 --block_config 1 --coupling_topology 20 --eul_step 0.1 --lr 0.01 --trials 3 --model_type scn --train_batch_size 16 --test_batch_size 128
+#
+#python final_train_and_test.py --dataset pems --gpus 2 --blocksize32 --block_config 3 --gating --coupling_topology 500 --lr 0.01 --trials 3 --model_type adadiag --train_batch_size 16 --test_batch_size 128
+#python final_train_and_test.py --dataset pems --gpus 2 --blocksize32 --block_config 2 --coupling_topology 20 --eul_step 0.01 --lr 0.01 --trials 3 --model_type scn --train_batch_size 16 --test_batch_size 128
 #
 
 
@@ -67,13 +67,4 @@ python final_train_and_test.py --trials 3 --model_type rnn --dataset smnist --gp
 python final_train_and_test.py --trials 3 --model_type rnn --dataset psmnist --gpus 3 --lr 0.001 --hidden_size 128 --n_layers 2 --bidirectional --l2_regul 0
 
 
-# Smaller batch sizes::
-#python final_train_and_test.py --dataset japanesevowels --gpus 2 --blocksize32 --block_config 3 --eul_step 0.1 --coupling_topology 20 --lr 0.01 --gating --trials 3 --model_type adadiag --train_batch_size 16 --test_batch_size 128
-#python final_train_and_test.py --dataset japanesevowels --gpus 2 --blocksize32 --block_config 1 --eul_step 0.1 --coupling_topology 20 --lr 0.01 --trials 3 --model_type scn --train_batch_size 16 --test_batch_size 128
-#
-#python final_train_and_test.py --dataset adiac --gpus 2 --blocksize32 --block_config 3 --gating --coupling_topology 20 --lr 0.01 --trials 3 --model_type adadiag --train_batch_size 16 --test_batch_size 128
-#python final_train_and_test.py --dataset adiac --gpus 2 --blocksize32 --block_config 1 --coupling_topology 20 --eul_step 0.1 --lr 0.01 --trials 3 --model_type scn --train_batch_size 16 --test_batch_size 128
-#
-#python final_train_and_test.py --dataset pems --gpus 2 --blocksize32 --block_config 3 --gating --coupling_topology 500 --lr 0.01 --trials 3 --model_type adadiag --train_batch_size 16 --test_batch_size 128
-#python final_train_and_test.py --dataset pems --gpus 2 --blocksize32 --block_config 2 --coupling_topology 20 --eul_step 0.01 --lr 0.01 --trials 3 --model_type scn --train_batch_size 16 --test_batch_size 128
-#
+
