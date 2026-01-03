@@ -44,27 +44,27 @@
 
 
 # Running (LSTM and RNN):
-python final_train_and_test.py --trials 3 --model_type lstm --dataset japanesevowels --gpus 1 --lr 0.001 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0 --train_batch_size 16
-python final_train_and_test.py --trials 3 --model_type lstm --dataset adiac --gpus 1 --lr 0.001 --hidden_size 128 --n_layers 2 --bidirectional --l2_regul 0 --train_batch_size 16
-python final_train_and_test.py --trials 3 --model_type lstm --dataset pems --gpus 1 --lr 0.001 --hidden_size 128 --n_layers 2 --bidirectional --l2_regul 0 --train_batch_size 16
-python final_train_and_test.py --trials 3 --model_type lstm --dataset forda --gpus 1 --lr 0.01 --hidden_size 64 --n_layers 3 --bidirectional --l2_regul 0
-python final_train_and_test.py --trials 3 --model_type lstm --dataset fordb --gpus 1 --lr 0.01 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0
-python final_train_and_test.py --trials 3 --model_type lstm --dataset ieeeppg --gpus 1 --lr 0.001 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0
-python final_train_and_test.py --trials 3 --model_type lstm --dataset har2 --gpus 1 --lr 0.01 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0
-python final_train_and_test.py --trials 3 --model_type lstm --dataset newstitlesentiment --gpus 1 --lr 0.01 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0.0001
-python final_train_and_test.py --trials 3 --model_type lstm --dataset smnist --gpus 1 --lr 0.01 --hidden_size 128 --n_layers 2 --l2_regul 0
-python final_train_and_test.py --trials 3 --model_type lstm --dataset psmnist --gpus 1 --lr 0.001 --hidden_size 64 --n_layers 3 --bidirectional --l2_regul 0
-
-python final_train_and_test.py --trials 3 --model_type rnn --dataset japanesevowels --gpus 3 --lr 0.001 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0.0001 --train_batch_size 16
-python final_train_and_test.py --trials 3 --model_type rnn --dataset adiac --gpus 3 --lr 0.01 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0.0001 --train_batch_size 16
-python final_train_and_test.py --trials 3 --model_type rnn --dataset pems --gpus 3 --lr 0.01 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0 --train_batch_size 16
-python final_train_and_test.py --trials 3 --model_type rnn --dataset forda --gpus 3 --lr 0.01 --hidden_size 128 --n_layers 2 --bidirectional --l2_regul 0
-python final_train_and_test.py --trials 3 --model_type rnn --dataset fordb --gpus 3 --lr 0.01 --hidden_size 64 --n_layers 2 --l2_regul 0.0001
-python final_train_and_test.py --trials 3 --model_type rnn --dataset ieeeppg --gpus 3 --lr 0.01 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0
-python final_train_and_test.py --trials 3 --model_type rnn --dataset har2 --gpus 3 --lr 0.01 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0.0001
-python final_train_and_test.py --trials 3 --model_type rnn --dataset newstitlesentiment --gpus 3 --lr 0.001 --hidden_size 64 --n_layers 3 --bidirectional --l2_regul 0.0001
-python final_train_and_test.py --trials 3 --model_type rnn --dataset smnist --gpus 3 --lr 0.001 --hidden_size 64 --n_layers 3 --bidirectional --l2_regul 0
-python final_train_and_test.py --trials 3 --model_type rnn --dataset psmnist --gpus 3 --lr 0.001 --hidden_size 128 --n_layers 2 --bidirectional --l2_regul 0
+#python final_train_and_test.py --trials 3 --model_type lstm --dataset japanesevowels --gpus 1 --lr 0.001 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0 --train_batch_size 16
+#python final_train_and_test.py --trials 3 --model_type lstm --dataset adiac --gpus 1 --lr 0.001 --hidden_size 128 --n_layers 2 --bidirectional --l2_regul 0 --train_batch_size 16
+#python final_train_and_test.py --trials 3 --model_type lstm --dataset pems --gpus 1 --lr 0.001 --hidden_size 128 --n_layers 2 --bidirectional --l2_regul 0 --train_batch_size 16
+#python final_train_and_test.py --trials 3 --model_type lstm --dataset forda --gpus 1 --lr 0.01 --hidden_size 64 --n_layers 3 --bidirectional --l2_regul 0
+#python final_train_and_test.py --trials 3 --model_type lstm --dataset fordb --gpus 1 --lr 0.01 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0
+#python final_train_and_test.py --trials 3 --model_type lstm --dataset ieeeppg --gpus 1 --lr 0.001 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0
+#python final_train_and_test.py --trials 3 --model_type lstm --dataset har2 --gpus 1 --lr 0.01 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0
+#python final_train_and_test.py --trials 3 --model_type lstm --dataset newstitlesentiment --gpus 1 --lr 0.01 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0.0001
+#python final_train_and_test.py --trials 3 --model_type lstm --dataset smnist --gpus 1 --lr 0.01 --hidden_size 128 --n_layers 2 --l2_regul 0
+#python final_train_and_test.py --trials 3 --model_type lstm --dataset psmnist --gpus 1 --lr 0.001 --hidden_size 64 --n_layers 3 --bidirectional --l2_regul 0
+#
+#python final_train_and_test.py --trials 3 --model_type rnn --dataset japanesevowels --gpus 3 --lr 0.001 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0.0001 --train_batch_size 16
+#python final_train_and_test.py --trials 3 --model_type rnn --dataset adiac --gpus 3 --lr 0.01 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0.0001 --train_batch_size 16
+#python final_train_and_test.py --trials 3 --model_type rnn --dataset pems --gpus 3 --lr 0.01 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0 --train_batch_size 16
+#python final_train_and_test.py --trials 3 --model_type rnn --dataset forda --gpus 3 --lr 0.01 --hidden_size 128 --n_layers 2 --bidirectional --l2_regul 0
+#python final_train_and_test.py --trials 3 --model_type rnn --dataset fordb --gpus 3 --lr 0.01 --hidden_size 64 --n_layers 2 --l2_regul 0.0001
+#python final_train_and_test.py --trials 3 --model_type rnn --dataset ieeeppg --gpus 3 --lr 0.01 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0
+#python final_train_and_test.py --trials 3 --model_type rnn --dataset har2 --gpus 3 --lr 0.01 --hidden_size 128 --n_layers 3 --bidirectional --l2_regul 0.0001
+#python final_train_and_test.py --trials 3 --model_type rnn --dataset newstitlesentiment --gpus 3 --lr 0.001 --hidden_size 64 --n_layers 3 --bidirectional --l2_regul 0.0001
+#python final_train_and_test.py --trials 3 --model_type rnn --dataset smnist --gpus 3 --lr 0.001 --hidden_size 64 --n_layers 3 --bidirectional --l2_regul 0
+#python final_train_and_test.py --trials 3 --model_type rnn --dataset psmnist --gpus 3 --lr 0.001 --hidden_size 128 --n_layers 2 --bidirectional --l2_regul 0
 
 
 
