@@ -3,4 +3,4 @@ Official repository of Ceni et al. "Sparse Assemblies of Recurrent Neural Networ
 
 Validation has been done via main_search.py file using the grid search specified in the search_space.py file.
 
-Final results have been obtained via final_test_results.py file.
+Final results have been obtained via final_train_and_test.py file.
