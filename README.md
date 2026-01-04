@@ -47,6 +47,4 @@ Argument Notes
 
 --blocksize 32: number of recurrent units per module.
 
---coupling_topology 20: coupling parameter 
-𝐶
-C defined in the paper.
+--coupling_topology 20: coupling parameter 𝐶 defined in the paper.
