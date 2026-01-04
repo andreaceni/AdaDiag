@@ -45,6 +45,6 @@ python final_train_and_test.py \
 
 Argument Notes
 
---blocksize 32: number of recurrent units per module.
+--blocksize32: sets 16 modules with 32 recurrent units each, while --blocksize8 sets 64 modules with 8 recurrent units each.
 
---coupling_topology 20: coupling parameter 𝐶 defined in the paper.
+--coupling_topology: the coupling parameter 𝐶 defined in the paper.
