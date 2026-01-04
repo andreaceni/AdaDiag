@@ -1,18 +1,52 @@
-# AdaDiag
-Official repository of Ceni et al. "Sparse Assemblies of Recurrent Neural Networks with Stability Guarantees" Neurocomputing (2026).
+# Sparse Assemblies of Recurrent Neural Networks with Stability Guarantees
 
-The actual implementation of the model can be found in the folder ```src/rnn-of-rnns/torchdyno/models/rnn_assembly/```.
+Official implementation of the paper:
 
-Validation has been done via the ```src/rnn-of-rnns/main_search.py``` script using the grid search specified in the ```src/rnn-of-rnns/search_space.py``` file.
+> **Ceni et al.**  
+> *Sparse Assemblies of Recurrent Neural Networks with Stability Guarantees*  
+> Neurocomputing, 2026.
 
-Final results have been obtained via the ```src/rnn-of-rnns/final_train_and_test.py``` script.
+## Repository Structure
 
-Results are automatically stored in the ```final_search/``` folder.
+- `src/rnn-of-rnns/torchdyno/models/rnn_assembly/`  
+  Contains the core implementation of the proposed RNN assembly model.
 
-## Example of usage on Adiac
+- `src/rnn-of-rnns/search_space.py`  
+  Defines the hyperparameter grid used for model selection.
 
-```python final_train_and_test.py --dataset adiac --gpus 0 --blocksize32 --block_config 3 --gating --coupling_topology 20 --lr 0.01 --trials 3 --model_type adadiag --train_batch_size 16```
+- `src/rnn-of-rnns/main_search.py`  
+  Runs the validation procedure via grid search.
 
---blocksize32 means that modules have 32 recurrent units
+- `src/rnn-of-rnns/final_train_and_test.py`  
+  Performs final training and evaluation using the selected hyperparameters.
 
---coupling_topology corresponds to the C parameter of the paper
+## Results
+
+- Validation and test results are automatically saved in the `final_search/` directory.
+
+
+## Example Usage (ADIAC dataset)
+
+The following command runs the final training and evaluation on the **ADIAC** dataset:
+
+```bash
+python final_train_and_test.py \
+  --dataset adiac \
+  --gpus 0 \
+  --blocksize 32 \
+  --block_config 3 \
+  --gating \
+  --coupling_topology 20 \
+  --lr 0.01 \
+  --trials 3 \
+  --model_type adadiag \
+  --train_batch_size 16
+```
+
+Argument Notes
+
+--blocksize 32: number of recurrent units per module.
+
+--coupling_topology 20: coupling parameter 
+𝐶
+C defined in the paper.
