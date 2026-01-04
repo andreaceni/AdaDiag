@@ -28,21 +28,19 @@ def AdaDiag_search_space(dataset_name):
         "input_size": 1,
         "out_size": 2,
         "block_sizes": tune.grid_search([
-            [32 for _ in range(16)],  # Standard configuration
+            [32 for _ in range(16)],  
             [8 for _ in range(64)],
         ]),
-        #"block_config": tune.grid_search([3]),
-        "block_config": tune.grid_search([13]),
+        "block_config": tune.grid_search([3,13]),
         "coupling_block_init_fn": ("uniform",),
         "coupling_topology": tune.grid_search([ 5, 20, 500]),
-        #"coupling_topology": tune.grid_search([ 60 ]),
         "eul_step": 0.1,
         "gamma": None,
         "activation": tune.grid_search(["relu"]),
         "dtype": torch.float32,
         "decay_epochs": [80, 160],
         "decay_scalar": 0.1,
-        "ortho_option": tune.grid_search(["permutation"]), # "unitary" (default) or "permutation", only for idx=8 (i.e. ortho_diag blocks)
+        #"ortho_option": tune.grid_search(["permutation"]), 
         "check_stability": True,
         "max_epochs": 250,
         "n_trials": 1,
@@ -67,13 +65,12 @@ def SCR_search_space(dataset_name):
         "train_batch_size": tune.grid_search([128]),
         "eval_batch_size": tune.grid_search([128]),
         "block_sizes": tune.grid_search([
-            [32 for _ in range(16)],  # Standard configuration
+            [32 for _ in range(16)],  
             [8 for _ in range(64)],
         ]),
         "block_config": tune.grid_search([2,1]),
         "coupling_block_init_fn": ("uniform",),
         "coupling_topology": tune.grid_search([ 20, 5, 500]),
-        #"coupling_topology": tune.grid_search([ 60]),
         "eul_step": tune.grid_search([0.01, 0.1, 0.001]),
         "gamma": None,
         "activation": tune.grid_search(["relu"]),
@@ -161,7 +158,7 @@ def AdaDiag_for_plot_withoutSkewSymmetry(dataset_name):
         "dtype": torch.float32,
         "decay_epochs": [80, 160],
         "decay_scalar": 0.1,
-        "ortho_option": "permutation", # "unitary" (default) or "permutation", only for idx=8 (i.e. ortho_diag blocks)
+        #"ortho_option": "permutation", 
         "check_stability": True,
         "max_epochs": 250,
         "n_trials": 1,
@@ -205,7 +202,7 @@ def AdaDiag_for_plot_Frequencies(dataset_name):
         "dtype": torch.float32,
         "decay_epochs": [80, 160],
         "decay_scalar": 0.1,
-        "ortho_option": "permutation", # "unitary" (default) or "permutation", only for idx=8 (i.e. ortho_diag blocks)
+        #"ortho_option": "permutation", 
         "check_stability": True,
         "max_epochs": 250,
         "n_trials": 1,
