@@ -33,7 +33,7 @@ The following command runs the final training and evaluation on the **ADIAC** da
 python final_train_and_test.py \
   --dataset adiac \
   --gpus 0 \
-  --blocksize 32 \
+  --blocksize32 \
   --block_config 3 \
   --gating \
   --coupling_topology 20 \
