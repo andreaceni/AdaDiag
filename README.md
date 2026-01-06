@@ -35,6 +35,16 @@ python final_train_and_test.py --dataset adiac --gpus 0 --blocksize32 --block_co
 
 Argument Notes
 
---blocksize32: sets 16 modules with 32 recurrent units each, while --blocksize8 sets 64 modules with 8 recurrent units each.
+--blocksize32: sets 16 modules with 32 recurrent units each (another option benchmarked in the paper is --blocksize8, corresponding to 64 modules with 8 recurrent units each).
+
+--block_config: sets the internal structure of the module. The value 3 corresponds to the AdaDiag setting defined by Eq. 9 of the paper.
+
+--gating: sets the learning of the vector of frequencies defined by Eq. 7 of the paper.
 
 --coupling_topology: the coupling parameter 𝐶 defined in the paper.
+
+--lr: sets the learning rate
+
+--trials: sets the number of trials to execute for computing the mean performance with std
+
+
