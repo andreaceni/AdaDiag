@@ -30,17 +30,7 @@ Official implementation of the paper:
 The following command runs the final training and evaluation on the **ADIAC** dataset:
 
 ```bash
-python final_train_and_test.py \
-  --dataset adiac \
-  --gpus 0 \
-  --blocksize32 \
-  --block_config 3 \
-  --gating \
-  --coupling_topology 20 \
-  --lr 0.01 \
-  --trials 3 \
-  --model_type adadiag \
-  --train_batch_size 16
+python final_train_and_test.py --dataset adiac --gpus 0 --blocksize32 --block_config 3 --gating --coupling_topology 20 --lr 0.01 --trials 3 --model_type adadiag --train_batch_size 16
 ```
 
 Argument Notes
