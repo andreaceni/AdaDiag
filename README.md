@@ -39,7 +39,7 @@ python final_train_and_test.py --dataset adiac --gpus 0 --blocksize32 --block_co
 
 --gating: sets the learning of the vector of frequencies defined by Eq. 7 of the paper.
 
---coupling_topology: the coupling parameter 𝐶 defined in the paper.
+--coupling_topology: sets the coupling parameter defined as 𝐶 in the paper.
 
 --lr: sets the learning rate
 
