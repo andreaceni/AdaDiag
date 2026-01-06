@@ -1,2 +1,4 @@
 ray[tune]
 aeon
+torch
+numpy
