@@ -33,8 +33,6 @@ The following command runs the final training and evaluation on the **ADIAC** da
 python final_train_and_test.py --dataset adiac --gpus 0 --blocksize32 --block_config 3 --gating --coupling_topology 20 --lr 0.01 --trials 3 --model_type adadiag --train_batch_size 16
 ```
 
-Argument Notes
-
 --blocksize32: sets 16 modules with 32 recurrent units each (another option benchmarked in the paper is --blocksize8, corresponding to 64 modules with 8 recurrent units each).
 
 --block_config: sets the internal structure of the module. The value 3 corresponds to the AdaDiag setting defined by Eq. 9 of the paper.
