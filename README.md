@@ -41,8 +41,6 @@ python final_train_and_test.py --dataset adiac --gpus 0 --blocksize32 --block_co
 
 --coupling_topology: sets the coupling parameter defined as 𝐶 in the paper.
 
---lr: sets the learning rate
+--lr: sets the learning rate.
 
---trials: sets the number of trials to execute for computing the mean performance with std
-
-
+--trials: sets the number of trials to execute for computing the mean performance with std.
